@@ -36,9 +36,9 @@ crontab -e
 ## Postscript ##
 A few explanations of why I did certain things:
 
-1. Why wrap the email body with <pre> </pre> before sending it out?
+1. Why wrap the email body with \<pre\> \</pre\> before sending it out?
 
-	It's because Outlook defaults to viewing emails in HTML mode, which badly mangles the "Aranda Lab" header. The <pre> protects multiple space characters from getting merged into one. Blame HTML for this silliness.
+	It's because Outlook defaults to viewing emails in HTML mode, which badly mangles the "Aranda Lab" header. The \<pre\> protects multiple space characters from getting merged into one. Blame HTML for this silliness.
 
 2. Why use command-line mail command (i.e. exim4) to do the emailing, instead of writing a script to do it?
 
