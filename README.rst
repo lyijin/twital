@@ -23,8 +23,7 @@ Surprisingly NOT the hardest part of the project. #2 was a bigger PITA.
 
 It's supposed to generate two files: ``.credentials`` and ``client_secret.json`` if it is unable to find these files on your system.
 
-.. note:: I was unable to generate them on Bash: The text-mode authentication did not work for some reason.
-   I had to run the code on Windows to authenticate via my browser to generate these two files, then move them over to my Debian system. -__-"
+**Note**: I was unable to generate them on Bash: The text-mode authentication did not work for some reason. I had to run the code on Windows to authenticate via my browser to generate these two files, then move them over to my Debian system. -__-"
 
 Once parsed, there's a lot of unexplained mojo in the script to deal with parsing dates and times. I've standardised the script to use a specific timezone (GMT+3) to properly output event start and end times.
 
