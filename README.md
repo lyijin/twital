@@ -32,3 +32,14 @@ crontab -e
 0 9 * * 0 cd /home/liewy/kaust/twital/ && ./mail_twital.sh
 
 (cron, by default, runs from ~, so one needs to cd into the folder containing the script.)
+
+## Postscript ##
+A few explanations of why I did certain things:
+
+1. Why wrap the email body with <pre> </pre> before sending it out?
+
+	It's because Outlook defaults to viewing emails in HTML mode, which badly mangles the "Aranda Lab" header. The <pre> protects multiple space characters from getting merged into one. Blame HTML for this silliness.
+
+2. Why use command-line mail command (i.e. exim4) to do the emailing, instead of writing a script to do it?
+
+	Laziness, and also because having the mail command set up properly on my own system allows me to email myself notifications (e.g. if I'm monitoring a script's output, I can get the output sent to me via email).
