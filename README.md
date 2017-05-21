@@ -16,7 +16,7 @@ There's basically three tasks:
 ## Parsing Google Calendar ##
 Surprisingly NOT the hardest part of the project. #2 was a bigger PITA.
 
-Google has provided sample code to parse one's personal calendar.
+Google has provided sample code to parse one's personal calendar.  
 https://developers.google.com/google-apps/calendar/quickstart/python
 
 It's supposed to generate two files: .credentials and client_secret.json if it is unable to find these files on your system. I WAS UNABLE TO GENERATE THEM ON BASH: THE TEXT-MODE AUTHENTICATION DID NOT WORK FOR SOME REASON. I had to run the code on Windows to authenticate via my browser to generate these two files, then move them over to my Debian system. -__-"
@@ -24,13 +24,13 @@ It's supposed to generate two files: .credentials and client_secret.json if it i
 Once parsed, there's a lot of unexplained mojo in the script to deal with parsing dates and times. I've standardised the script to use a specific timezone (GMT+3) to properly output event start and end times.
 
 ## Emailing the text out ##
-Again, RTFM and follow instructions.
+Again, RTFM and follow instructions.  
 https://wiki.debian.org/GmailAndExim4
 
 I tried using Yahoo Mail and it didn't work. I guess there's a reason why Gmail is dominating the free email space.
 
 ## Setting up the weekly trigger ##
-crontab -e
+$ crontab -e  
 0 9 * * 0 cd /home/liewy/kaust/twital/ && ./mail_twital.sh
 
 (cron, by default, runs from ~, so one needs to cd into the folder containing the script.)
