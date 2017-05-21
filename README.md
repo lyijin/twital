@@ -2,6 +2,8 @@
 
 "twital" stands for "This Week in the Aranda Lab", by the way. Creative naming is not my forte.
 
+TL;DR: check out "email_contents.txt" for a sample output.
+
 Note: for security concerns, I have modified the script to remove several addresses. These addresses appears as "REDACTED", so you'll have to plug your own details to get it to work. I have also excluded client_secret.json, which is required for task #1.
 
 ## Overview of process ##
